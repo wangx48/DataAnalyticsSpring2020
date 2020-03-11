@@ -106,7 +106,8 @@ devtools::install_github("dkahle/ggmap")
 library(ggmap)
 addsample<-bronxadd[sample.int(dim(bronxadd),size=nsample),]
 addrlist = paste(addsample$ADDRESS,'NY',addsample$ZIP.CODE,'US',sep = ' ')
-register_google(key='AIzaSyAv36-dSjFtbckBXT7NILVHMfg-0EDcEOU')
+register_google(key='mykey')
+#for security
 querylist = geocode(addrlist)
 help("geocode")
 
